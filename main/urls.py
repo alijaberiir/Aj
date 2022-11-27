@@ -16,6 +16,9 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
+from dashboard.views import test,testnotif
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('',test.as_view(),name='text'),
+    path("notif/", testnotif, name="test_notif"),
 ]
